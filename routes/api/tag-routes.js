@@ -43,7 +43,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
     // create a new tag
     Tag.create(req.body)
-    .then((tag) => res.status(200).json("success", tag))
+    .then((tag) => res.status(200).json(tag))
     .catch((error) => res.status(400).json(error));
 });
 
@@ -65,7 +65,7 @@ router.delete('/:id', (req, res) => {
             id: req.params.id,
         }
     })
-    .then((tag) => res.status(200).json("success", tag))
+    .then((tag) => res.status(200).json(tag))
     .catch((error) => res.status(400).json(error));
 });
 
